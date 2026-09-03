@@ -18,5 +18,11 @@ Known Websites
 Hashing Functions
   Argon2, scrypt, Bcryot, PBKDF2
 
+Password Cracking
+  Hashcat- run on host machine to use GPU preformance
+  John the Ripper - Uses CPUworks in VMs
+
+
+
 
 
