@@ -27,6 +27,8 @@ Known Wordlists in Linux
   Rockyou.txt > /user/share/wordlists
 
 Known Websites
+  TunnelsUpc- Anaylzer
+    https://www.tunnelsup.com/hash-analyzer/
   Crackstation
     https://www.google.com/goto?url=CAESUQHrOzAVp_4N8jRUOMnSfAKRfp8YcAB13OTo6PDCTdCsiQmYBzdZWxJK5J6Ds2lEqRMLNwQ9CSbA1dBEa5Qwd1kNflqdgDEmD55Rvww1YvmYNg
   Hashes.com
@@ -42,7 +44,6 @@ Password Cracking
     code list: https://hashcat.net/wiki/doku.php?id=example_hashes
   John the Ripper - Uses CPUworks in VMs
 
-
-
-
+Hashing for Integrity Checking
+  
 
