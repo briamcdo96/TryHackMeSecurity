@@ -1,0 +1,22 @@
+Termnial Commands (Linux)
+  hexdump
+  md5sum *.extenstion
+  sha1sum *.extenstion
+  sha256sum *.extenstion
+
+Known Wordlists in Linux
+  Rockyou.txt > /user/share/wordlists
+
+Known Websites
+  Crackstation
+    https://www.google.com/goto?url=CAESUQHrOzAVp_4N8jRUOMnSfAKRfp8YcAB13OTo6PDCTdCsiQmYBzdZWxJK5J6Ds2lEqRMLNwQ9CSbA1dBEa5Qwd1kNflqdgDEmD55Rvww1YvmYNg
+  Hashes.com
+    https://www.google.com/goto?url=CAESYwHrOzAVPutM2b_Mu5h5Qu8OwE54M2J8b33CMGtMtSF6MVteIbjerGM96ktor2vwhJFmj8WLryimVK2Zyu-sFg5fDiqdZcQL7WOdk3sr9RtJFJb9XCyKv9OOk80YhhTL1mxKiA
+  md5 Hash Crack
+    https://www.google.com/goto?url=CAESUgHrOzAVG6T2qy_PSNZ_u2Kftx39XXKmw0f_GJcb8rwYHxWJSQFxJAujbfbWejQBFzQ9r4WEQdz_7WfPvmoHpMx0xpZ0Kvq_VhLt5bDvED7EyPM
+
+Hashing Functions
+  Argon2, scrypt, Bcryot, PBKDF2
+
+
+
