@@ -1,1 +1,15 @@
+Command Synatx for John the Ripper
+  john --wordlist[path to wordlist] [Path to File]
+    ex. john --wordlist=/usr/share/wordlists/rockyou.txt hash_to_crack.txt
+  john --format=[format] --wordlist[path to wordlist] [Path to File]
+    ex. john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash_to_crack.txt
+  john --list=formats | grep -iF "md5".
+    NOTE: will pull md5 from the list of formats
+
+  NOTE: Use raw-(format) to use basic format query
+
+Introduction to hash-identifier
+  wget / curl hash-id.py
+    https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/hash-id.py
+  Launch with python3 hash-id.py
 
