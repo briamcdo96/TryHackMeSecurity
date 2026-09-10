@@ -72,4 +72,25 @@ Cracking/etc/shadow Hashes
           Ex. john --wordlist=[path to wordlist] --rule=PoloPassword [path to file]
 
   Cracking Password Protected Zip Files
+    zip2john [option] [zip file] > [output file]
+      ex.zip2john zipfile.zip > zip_hash.txt
+
+    1) Use zip2john command, output should be .txt
+    2) Next use john --wordlist=/usr/share/wordlists/rockyou.txt [file.txt]
+
+    NOTE: To review the contents of the .zip, we need to use "unzip" command then choose the .zip file. 
+          After unlocking we will need to use "ls" to review directory, and then use cat to read the flag.txt
+
+  Cracking a Password-Protected RAR Archive
+    rar2john [rar file] > [output file]
+      Ex. /opt/john/rar2john rarfile.rar > rar_hash.txt
+
+    Tried unrar filename however it failed, found i need to add a parameter after unrar "e" to extract to current directory
+
+  Cracking SSH Key Passwords
+    ssh2john
+    NOTE: If ssh2john is not installed we can us ssh2john.py located in opt/john/ssh2jon.py
+      ex. ssh2john [id_rsa private key file] > [output file]
+
     
+  
