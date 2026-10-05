@@ -1,1 +1,48 @@
 Web Application Overview
+  Front End
+    HTML (Hypetext Markup Lanugage) - Foundation apect of web applications
+    CSS (Cascading Style Sheets) - Standard apperance
+    JS (Java Script) - Enables more complex activity in the web browser. 
+
+  Backend
+    Database - 
+    Infrastructure - web servers, application servers, storage, various network devices and software that support to web applications
+    WAF (Web Application Firewall) - optional component for web applications. (filters out dangerous requests)
+
+Unfirom Resource Locator (URL)
+  https://user:password@tryhackme.com80/view-room?id=1#task3
+  Scheme = https (protocol used to access the website: Commonly HTTP or HTTPS)
+  User = user:password (Sites that require authentication
+  Host/Domian = tryhackmev (tells which website to access)
+  Port = 80 (direct browser to the right service)
+  Path = view-room (Points to specific file)
+  Query String = ?id=1 (used to search terms or form inputs, handle securly to prevent injection attacks)
+  Fragment = #task3 (point to speciifc webpage)
+
+HTTP Messages
+  packets of data exchanged between a user (the client) and the web server
+
+  HTTPS Requests - Sent by the user to trigger actions on the web application.
+  HTTPS Responses - Sent by the server in response to the user’s request.
+
+  Start Line - introduction message, gives important details about how the message should be handled.
+  Headers - Made up of key-value pairs that provide extra information about the HTTP message
+  Empty Line - Divider that separates the header from the bod
+  Body - Data is stored
+
+HTTP Request: Request Line and Methods
+    Request Line (start line) - first part of an HTTP request, which tells the server what kind of request it is dealing with. 
+    Three main parts: HTTP Method / URL Path / HTTP Version
+      Method /path HTTP/version
+        example GET /user/login.html HTTP/1.1
+  ---------------------
+  HTTP Headers: HTTP Vaules
+
+  Host: tryhackme.com
+  User-Agent: Mozilla/5.0
+  Accept:*/*
+  Accept-Language:en-US,en;q=0.5
+  Connection: leep-alive
+
+
+
