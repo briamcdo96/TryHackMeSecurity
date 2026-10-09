@@ -13,7 +13,7 @@ Unfirom Resource Locator (URL)
   https://user:password@tryhackme.com80/view-room?id=1#task3
   Scheme = https (protocol used to access the website: Commonly HTTP or HTTPS)
   User = user:password (Sites that require authentication
-  Host/Domian = tryhackmev (tells which website to access)
+  Host/Domian = tryhackme (tells which website to access)
   Port = 80 (direct browser to the right service)
   Path = view-room (Points to specific file)
   Query String = ?id=1 (used to search terms or form inputs, handle securly to prevent injection attacks)
@@ -43,6 +43,68 @@ HTTP Request: Request Line and Methods
   Accept:*/*
   Accept-Language:en-US,en;q=0.5
   Connection: leep-alive
+
+  HTTP Method tells the server what action the user wants to perform
+    GET
+    Used to fetch data from the server without making any changes. Reminder! Make sure you’re only exposing data the user is allowed to see. Avoid putting sensitive info like tokens or passwords in GET requests since they can show up as plaintext.
+    
+    POST
+    Sends data to the server, usually to create or update something. Reminder! Always validate and clean the input to avoid attacks like SQL injection or XSS.
+    
+    PUT
+    Replaces or updates something on the server. Reminder! Make sure the user is authorised to make changes before accepting the request.
+    
+    DELETE
+    Removes something from the server. Reminder! Just like with PUT, make sure only authorised users can delete resources.
+    
+    Besides these common methods, there are a few others used in specific cases:
+    
+    PATCH
+    Updates part of a resource. It’s useful for making small changes without replacing the whole thing, but always validate the data to avoid inconsistencies.
+    
+    HEAD
+    Works like GET but only retrieves headers, not the full content. It’s handy for checking metadata without downloading the full response.
+    
+    OPTIONS
+    Tells you what methods are available for a specific resource, helping clients understand what they can do with the server.
+    
+    TRACE
+    Similar to OPTIONS, it shows which methods are allowed, often for debugging. Many servers disable it for security reasons.
+    
+    CONNECT
+    Used to create a secure connection, like for HTTPS. It’s not as common but is critical for encrypted communication.
+
+  HTTP Version
+    shows the protocol version used to communicate between the client and server.
+    HTTP/0.9 (1991)
+    The first version, only supported GET requests.
+    
+    HTTP/1.0 (1996)
+    Added headers and better support for different types of content, improving caching.
+    
+    HTTP/1.1 (1997)
+    Brought persistent connections, chunked transfer encoding, and better caching. It’s still widely used today.
+    
+    HTTP/2 (2015)
+    Introduced features like multiplexing, header compression, and prioritisation for faster performance.
+    
+    HTTP/3 (2022)
+    Built on HTTP/2, but uses a new protocol (QUIC) for quicker and more secure connections.
+---------------------
+HTTP Request: Headers and Body
+  Request Headers allow extra information to be conveyed to the web server about the request
+
+    Request Header | Exmple | Description
+    Host | tryhackme.com | Specifies the name of the web server the request is for
+    User Agent | Mozilla/5.0 | Shares information about the web browser the request originates
+    Referer | https://www.google.com | URl from which the request came from
+    Cookie | user_type=student;room=introtowebapplications;room_status=in_progress | Info stored in browser
+    Content Type | application/json | Type or fromat of data in the request. 
+
+  Request Body
+    Requests such as POST and PUT, where data is sent to the web server as opposed to requested from the web server, the data is located inside the HTTP Request Body. The formatting of the data can take many forms, but some common ones are URL Encoded, Form Data, JSON, or XML.
+
+  
 
 
 
