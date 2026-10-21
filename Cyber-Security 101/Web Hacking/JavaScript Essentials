@@ -1,1 +1,73 @@
 Essential Concepts
+  Three different ways to declare Variables
+    var - functionpscoped
+    let - block-scoped
+    const - block-scoped
+
+  Data Types
+    String - text
+    number
+    Boolean (true or false)
+    null
+    undefined
+    object
+
+  Functions
+    Block of code designed to perform a specific task
+
+  Loops
+    Blocks are run mutiple times as a condiiton is true
+    Common Loops
+      for
+      while
+      do...while
+
+  Request-Response Cycle
+    A user's browser (the client) sends a request to a web server, and the server responds with the requested information. This could be a webpage, data, or other resources.
+
+JavaScript Overview
+  Wrote a simple JavaScript code adding two numbers, and outputing the result. 
+    x = 5;
+    y = 10;
+    let result = x + y;
+    console.log("The Result is:" + result);
+
+Integrating JavaScript in HTML
+  Internal JavaScript
+     Embedding the JS code directly within an HTML document. This method is preferable for beginners because it allows them to see how the script interacts with the HTML. The script is inserted between <script> tags. These tags can be placed inside the <head> section, typically used for scripts that need to be loaded before the page content is rendered, or inside the <body> section, where the script can be utilised to interact with elements as they are loaded on the web page.
+
+  External JavaScript
+    Storing JS code in a separate file ending with a .js file extension. This method helps developers keep the HTML document clean and organised. The external JS file can be stored or hosted on the same web server as the HTML document or stored on an external web server such as the cloud.
+
+Abusing Dialogue Functions
+  JS provided built-in fuctions like 
+    Alert
+      displays a message in a dialogue box with an "Ok" button.
+        ex. alter("HellTHM")' = "HelloTHM"
+    prompt
+      displays a dialogue box that asks for user input, it returns the entered value when the user clicks "Ok"
+      ex. prompt("What is your name?");
+
+    confirm
+      displays a dialogue box with a message and two buttons: "OK" and "Cancel". It returns true if the user clicks "OK" and false if the user clicks "Cancel
+        ex. confirm("Do you want to proceed?")
+
+  Bypassing Control Flow Statements
+    Control flow in JS refers to the order in which statements and code blocks are executed based on certain conditions.
+
+  Q: What is the message displayed if you enter the age less than 18?
+      A: You are a minor
+
+  Q: What is the password for the user admin?
+    Opened the file for login.html, using the pluma
+    Found the password === "ComplexPassword"
+
+Exploring Minifield FIles
+  Website to Deobfuscator: https://obf-io.deobfuscate.io/
+
+
+
+
+
+
+
