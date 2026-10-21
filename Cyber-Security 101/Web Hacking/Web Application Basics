@@ -99,7 +99,7 @@ HTTP Request: Headers and Body
     User Agent | Mozilla/5.0 | Shares information about the web browser the request originates
     Referer | https://www.google.com | URl from which the request came from
     Cookie | user_type=student;room=introtowebapplications;room_status=in_progress | Info stored in browser
-    Content Type | application/json | Type or fromat of data in the request. 
+    Content Type | application/json | Type or format of data in the request. 
 
   Request Body
     Requests such as POST and PUT, where data is sent to the web server as opposed to requested from the web server, the data is located inside the HTTP Request Body. The formatting of the data can take many forms, but some common ones are URL Encoded, Form Data, JSON, or XML.
@@ -318,5 +318,12 @@ Q: Make a GET request to /api/users. What is the flag?
 Q: Make a POST request to /api/user/2 and update the country of Bob from UK to US. What is the flag?
     Changed Request to POST
     Updating URL to the following: https://tryhackme.com/api/user/2
-    
+    Changed Parameter to country : UK and go
+    Re-attempted question 1 Get request, and found Bob had UK
+    Re-tried the POST again changing the parameter from UK to US and the flag generated
+      THM{YOU_HAVE_MODIFIED_THE_USER_DATA}
+
 Q:Make a DELETE request to /api/user/1 to delete the user. What is the flag?
+  Changed requedt to Delete
+  Updated URL to be https://tryhackme.com/api/user/1
+  Recieved the following flag: THM{YOU_HAVE_JUST_DELETED_A_USER}
