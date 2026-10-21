@@ -1,1 +1,78 @@
+Databases 101
+  Types of Databases
+    Relation databases - Store structured data, meaning the data inserted into this database follows a structure. For example, the data collected on a user consists of first_name, last_name, email_address, username and password.
 
+    Non-Relational databases -  Instead of storing data the above way, store data in a non-tabular format. For example, if documents are being scanned, which can contain varying types and quantities of data, and are stored in a database that calls for a non-tabular format. 
+
+  Tables, Rows and Columns
+
+    _______________Table_________________
+    | id | Name | Published_Date | = Row
+      1
+      2
+      3
+    Column
+
+  Primary and Foreign Keys
+    Primary Key = ensured data collected in a certian column is unique
+    Foreign Key = a key in a column in a table that also exsists in another table within the database. (links tables togther)
+
+SQL
+  CREATE DATABASES * ;
+  USE * ;
+  DROP database *;
+  DESCRIBE *;
+  ALTER TABLE *;
+  DROP TABLE *;
+
+CRUD
+  CRUD stands for Create, Read, Update, and Delete, which are considered the basic operations in any system that manages data.
+
+  INSERT INTO (ID,"TEXT"TEXT"* VALUES (1,"X","X");
+    INSERT INTO books (id, name, published_date, description)
+    VALUES (1, "Android Security Internals", "2014-10-14", "An In-Depth Guide to Android's Security Architecture");
+
+  SELECT (header) FROM (table)
+    ex. SELECT name, description FROM books;
+
+  UPDATE (table)
+    SET description = "An In-Depth Guide to Android's Security Architecture."
+    WHERE id = 1
+
+  DELETE FROM (table) WHERE id = X
+
+  Q: Using the tools_db database, what is the name of the tool in the hacking_tools table that can be used to perform man-in-the-middle attacks on wireless networks?
+    Used the following SQL query: Select * from hacking_tools;
+    A: Wi-Fi Pineapple
+
+  Q: Using the tools_db database, what is the shared category for both USB Rubber Ducky and Bash Bunny?
+      Used the following command: SELECT * from hacking_tools WHERE name IN ("USB Rubber Ducky", "Bash Bunny");
+      A: USB attacks
+
+Clauses
+  DISTINCT - clause is used to avoid duplicate records when doing a query, returning only unique values.
+    Ex. SELECT DISTINCT name FROM books;
+
+  GROUP BY - clause aggregates data from multiple records and groups the query results in columns
+    Ex. Select name, COUNT(*) FROM books GROUP BY name;
+
+  ORDER BY - he ORDER BY clause can be used to sort the records returned by a query in ascending or descending order. Using functions like ASC and DESC
+    Ex. Select * FROM books ORDER BY (table) ASC;
+
+  HAVING - lause is used with other clauses to filter groups or results of records based on a condition. In the case of GROUP BY, it evaluates the condition to TRUE or FALSE, unlike the WHERE clause HAVING filters the results after the aggregation is performed.
+    Ex. SELECT name, COUNT(*) FROM books GROUP BY name HAVING name LIKE '%HACK%';
+
+  Q: Using the tools_db database, what is the total number of distinct categories in the hacking_tools table?
+    Command Used: SELECT DISTINCT category from hacking_tools;
+    A: 6
+
+  Q: Using the tools_db database, what is the first tool (by name) in ascending order from the hacking_tools table
+    Command Used: SELECT name FROM hacking_tools ORDER BY name ASC;
+    A: Bash Bunny
+
+  Q: Using the tools_db database, what is the first tool (by name) in descending order from the hacking_tools table?
+    Command Used: SELECT name FROM hacking_tools ORDER BY name DESC;
+    A: Wi-Fi Pineapple
+
+Operators
+  
