@@ -141,13 +141,55 @@ Operators
 
 Functions
   String Functions
+    preforms operations on a string, returning a value assoicated with it
+
   CONCAT() Function
+    used to add two or more strings together. It is useful to combine text from different columns.
+      ex. SELECT CONCAT(name, " is a type of ", category, " book.") AS book_info FROM books;
+
   GROUP_CONCAT() Function
+    concatenate data from multiple rows into one field. Let's explore an example of its usage.
+      ex. SELECT category, GROUP_CONCAT(name SEPARATOR ", ") AS books FROM books GROUP BY category;
+
   SUBSTRING() Function
+    Retrieve a substring from a string within a query, starting at a determined position. The length of this substring can also be specified.
+      ex. SELECT SUBSTRING(published_date, 1, 4) AS published_year FROM books;
+
   LENGTH() Function
+    returns the number of characters in a string. This includes spaces and punctuation. We can find an example below
+    ex. SELECT LENGTH(name) AS name_length FROM books;
+
   Aggregated Function
+    aggregate the value of multiple rows within one specified criteria in the query; It can combine multiple values into one result
+
   COUNT() Function
+    returns the number of records within an expression
+      ex. SELECT COUNT(*) AS total_books FROM books;
+
   SUM() Function
+     function sums all values (not NULL) of a determined column
+      ex. SELECT SUM(price) AS total_price FROM books;
+
   MAX() Function
+    calculates the maximum value within a provided column in an expression
+      ex. SELECT MAX(published_date) AS latest_book FROM books;
+
   MIN() Function
+    calculates the minimum value within a provided column in an expression
+      ex. SELECT MIN(published_date) AS earliest_book FROM books;
+
+  Q: Using the tools_db database, what is the tool with the longest name based on character length?
+    Command Used: SELECT CONCAT(name, ' is the length of ', LENGTH(name)) AS name_length 
+FROM hacking_tools;
+    A: USB Rubber Ducky
+
+  Q: Using the tools_db database, what is the total sum of all tools?
+    Command Used: SELECT SUM(amount) AS Total_tools FROM hacking_tools;
+    A: 1444
+
+  Q: Using the tools_db database, what are the tool names where the amount does not end in 0, and group the tool names concatenated by " & ".
+    Command Used: SELECT GROUP_CONCAT(name SEPARATOR ' & ') AS grouped_tools FROM hacking_tools WHERE amount % 10 != 0;
+    A: Flipper Zero & iCopy-XS 
+
+
   
