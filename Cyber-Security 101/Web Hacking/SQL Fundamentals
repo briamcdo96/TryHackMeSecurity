@@ -75,4 +75,79 @@ Clauses
     A: Wi-Fi Pineapple
 
 Operators
+  Logical Operations
+    truth coindition and return boolean values (true or false)
+
+  Like Operator
+    LIKE - operator is commonly used in conjuction with clauses
+    WHERE - order to filter for specific patterns within a column
+    ex. SELECT * FROM books WHERE description LIKE "%guide%";
+
+  AND Operator
+    AND operators use mutiple condiitons within a query and reutnr true if all of them are true
+    ex. SELECT * FROM books WHERE cateogry = "Offensive Security" AND name = "Bug Bounty Bootcamp"
+
+  OR Operator
+    OR Operator combines mutiple conditions within queries and returns TRUE if at least one of these conditions is true
+      ex. SELECT * FROM books WHERE name LIKE "%Andriod%" OR name LIKE "%iOS%";
+
+  NOT Operator
+    reverses the value of the boolean operator allowing the excldued a specific condition
+      ex. SELECT * FROM books WHERE NOT descirption LIKE "%guide%";
+
+  BETWEEN Operator
+    allows for the value to exists withing a defined range
+      ex. SELECT * FROM books WHERE id Between 2 AND 4;
+
+  Comparision Operators
+    compares values and checks if they meet speicifc criteria
+
+  Equal To Operator
+    = operator compares two expressions and determines if they are requal or it can check if the value matches another one in a specific column
+      ex. SELECT * FROM books WHERE name = "Design Secure Software";
+
+  Not Equal to Operator
+    != compares epxressions and tests if they are not equal
+      ex. SELECT * FROM books WHERE category != "Offensive Security";
+
+  Less Than Operator
+    < compares if the expression with a given value is lesser than the provided one
+      ex. SELECT * FROM books WHERE published_date < "2020-01-01";
+
+  Greater than Operator
+    > Compares if the expression with a given value is greater than the provided one
+      ex. SELECT * FROM books WHERE published_date > "2020-01-01";
+
+  Less Than and Greater Than
+    <= - Less than or equal
+      ex. SELECT * FROM books WHERE published_date <= "2020-01-01";
+    >= - Greater than Equal
+      ex. SELECT * FROM books WHERE published_date =< "2020-01-01";
+
+
+  Q: Using the tools_db database, which tool falls under the Multi-tool category and is useful for pentesters and geeks?
+    Commands Used:
+      SHOW DATABSES;
+      SHOW TABLES;
+      DESCRIBE hacking_tools
+      SELECT * FROM hacking_tools WHERE category LIKE '%Multi-tool%' AND description LIKE '%pentester%' AND description LIKE '%geek%';
+    A: 
+  Q: Using the tools_db database, what is the category of tools with an amount greater than or equal to 300?
+    Command UsedSELECT * FROM hacking_tools WHERE amount >= "300";
+    A: RFID cloning
+  Q: Using the tools_db database, which tool falls under the Network intelligence category with an amount less than 100?
+    Command Used: SELECT * FROM hacking_tools WHERE category = "Network intelligence" AND amount < 100;
+    A: Lan Turtle
+
+Functions
+  String Functions
+  CONCAT() Function
+  GROUP_CONCAT() Function
+  SUBSTRING() Function
+  LENGTH() Function
+  Aggregated Function
+  COUNT() Function
+  SUM() Function
+  MAX() Function
+  MIN() Function
   
